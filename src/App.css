@@ -106,73 +106,9 @@ body {
 }
 
 /* 3qism dizayn */
-
-.product-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.product-item {
-  padding: 10px 15px;
-  margin: 10px 0;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.product-item:hover {
-  background-color: #eef;
-}
-
 .product-item.active {
-  background-color: #cce5ff;
-  font-weight: bold;
-  border-color: #007bff;
-}
-
-.illness-info {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #fffbe6;
-  border: 1px solid #ffeeba;
-  border-radius: 5px;
-}
-
-.illness-info h4 {
-  margin-bottom: 10px;
-}
-
-.illness-info p {
-  margin: 0;
-}
-
-
-/* 4qism savol javob qismi  */
-
-.faq-list {
-  margin-top: 10px;
-  padding: 0;
-  list-style: none;
-}
-
-.faq-item {
-  margin-bottom: 15px;
-  font-size: 14px;
-}
-
-
-/* Slide-in animatsiyasi */
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  background-color: rgb(16, 178, 232);
+  color: white;
 }
 
 /* Tugmalar uchun */
@@ -260,6 +196,23 @@ input[type="range"]::-moz-range-thumb {
   .product-info {
     padding: 8px;
   }
+
+  .navigation-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reset-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .clock-container {
+    font-size: 16px;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -271,8 +224,12 @@ input[type="range"]::-moz-range-thumb {
     font-size: 14px;
     padding: 8px 12px;
   }
-}
 
+  .reset-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
 
 /* Soat uchun qo'shimcha stil */
 .clock-container {
@@ -294,7 +251,6 @@ input[type="range"]::-moz-range-thumb {
   margin: 10px; /* Soatni boshqa elementlardan ajratish uchun */
 }
 
-/* Soatni zamonaviy ko'rinishga keltirish */
 .clock-container .time {
   text-align: center;
 }
@@ -331,21 +287,166 @@ input[type="range"]::-moz-range-thumb {
 
 
 
-.product-image{
-  width: 200px;
-  height: 200px;
+
+.reset-button {
+  display: flex;
+  align-items: center;
+  background-color: #4CAF50; /* Tugma fon rangi */
+  color: white; /* Matn rangi */
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #45a049; /* Hover holatidagi fon rangi */
+}
+
+.refresh-icon {
+  margin-right: 8px; /* Ikonka va matn orasidagi bo'shliq */
+  font-size: 18px; /* Ikonkani kattaligi */
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mahsulot itemasi uchun hover animatsiyasi */
+.product-item {
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 10px 0;
+  background: #f4f9f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s ease;
+}
+
+/* Hover holatidagi animatsiya */
+.product-item:hover {
+  background-color: #ffe6ec;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Hoverda soyali effekt */
+}
+
+/* Active holatidagi animatsiya */
 .product-item.active {
   background-color: rgb(16, 178, 232);
   color: white;
+  transform: scale(1.05); /* Aktiv holatga o'zgarish */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Aktiv holatda yanada kuchli soyali effekt */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn.active {
-  background-color: rgb(16, 178, 232);
-  
+
+
+/* Tugmalar uchun hover animatsiyasi */
+.btn:hover {
+  background-color: #00b333;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hoverda tugma uchun soyali effekt */
+}
+
+/* Range input uchun hover animatsiyasi */
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Range inputning thumb (saf) qismi hover holatidagi soyali effekt */
+}
+
+/* Soat konteynerining hover animatsiyasi */
+.clock-container:hover {
+  transform: scale(1.05); /* Soat konteyneri hover holatida kattalashadi */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Hoverda ko'proq soyali effekt */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Boshqa elementlar uchun umumiy animatsiya */
+/* Boshqa elementlar uchun umumiy animatsiya */
+@keyframes buttonHoverEffect {
+  0% {
+    transform: scale(1);
+    background-color: #007bff;
+  }
+  50% {
+    transform: scale(1.05);  /* Hoverda kichik kattalashadi */
+    background-color: #0056b3;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #007bff;
+  }
+}
+
+/* Hover holatida animatsiyani qo'llash */
+.product-item:hover {
+  animation: buttonHoverEffect 1s ease-in-out; /* 1 soniya davomida animatsiya */
+}
+
+
+.product-item:hover {
+  animation: buttonHoverEffect 0.6s ease-in-out;
+}
+
+/* Soat animatsiyasini qo'shish */
+@keyframes clockAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
